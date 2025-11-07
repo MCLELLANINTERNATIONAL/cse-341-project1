@@ -65,9 +65,6 @@
                 },
                 "birthday": {
                   "example": "any"
-                },
-                "ipaddress": {
-                  "example": "any"
                 }
               }
             }
@@ -137,9 +134,6 @@
                   "example": "any"
                 },
                 "birthday": {
-                  "example": "any"
-                },
-                "ipaddress": {
                   "example": "any"
                 }
               }
