@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "",
+  "host": "project1-7edy.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -16,7 +16,7 @@
         "tags": [
           "Hello World"
         ],
-        "description": "project1-7edy.onrender.com",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
