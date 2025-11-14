@@ -1,7 +1,7 @@
 const mongodb = require('../data/database');
 const { ObjectId } = require('mongodb');
 
-const getAll = async (req, res) => {
+/*const getAll = async (req, res) => {
     //#swagger.tags = ['Contacts']
     mongodb
         .getDatabase()
@@ -15,8 +15,23 @@ const getAll = async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(contacts);
     });
-};
+};*/
 
+const getAll = async (req, res) => {
+    try { 
+    //#swagger.tags = ['Contacts']
+    const contacts = await mongodb
+        .getDatabase()
+        .db()
+        .collection('contacts')
+        .find()
+        .toArray();
+    res.status(200).json(contacts);
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    } 
+  };
+  
 const getSingle = async (req, res) => {
     //#swagger.tags = ['Contacts']
     if (!ObjectId.isValid(req.params.id)) {
